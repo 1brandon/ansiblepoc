@@ -1,2 +1,12 @@
-name: ensure apache is running (and enable it at boot)
+---
+# This playbook test apache
+- name: ApacheRunning 
+  hosts: 10.4.7.57
+
+  tasks:
+  - name: ensure apache is running (and enable it at boot)
     service: name=httpd state=started enabled=yes
+
+
+
+
