@@ -1,0 +1,2 @@
+name: ensure apache is running (and enable it at boot)
+    service: name=httpd state=started enabled=yes
