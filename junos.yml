@@ -1,4 +1,8 @@
-# retrieve facts using NETCONF, assumes ssh-keys
+---
+# This playbook get junos info
+- name: junos info
+  hosts: 10.4.6.13
 
-- junos_get_facts: host={{ inventory_hostname }}
-  register: junos
+  tasks:
+  - junos_get_facts: host={{ inventory_hostname }}
+    register: junos
