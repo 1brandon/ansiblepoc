@@ -1,8 +1,15 @@
 ---
 # This playbook get junos info
-- name: junos info
-  hosts: 10.4.6.13
+- name: Get Device Facts
+  hosts: dc1
+  roles:
+  - Juniper.junos
+  connection: local
+  gather_facts: no
 
   tasks:
-  - junos_get_facts: host={{ inventory_hostname }}
+  - name: Retrieve information from devices running Junos OS
+    junos_get_facts:  host={{ inventory_hostname }}         
     register: junos
+  - name: version
+    debug: msg="{{ junos.facts.version }}"
