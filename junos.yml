@@ -1,7 +1,7 @@
 ---
 # This playbook get junos info
 - name: Get Device Facts
-  hosts: dc1
+  hosts: 10.4.6.13
   roles:
   - Juniper.junos
   connection: local
