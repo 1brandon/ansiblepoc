@@ -9,7 +9,10 @@
 
   tasks:
   - name: Retrieve information from devices running Junos OS
-    junos_get_facts:  host={{ inventory_hostname }}         
+    junos_get_facts:  
+      host={{ inventory_hostname }}         
+      user=branbell
+      passwd={{ password_ssh }}
     register: junos
   - name: version
     debug: msg="{{ junos.facts.version }}"
