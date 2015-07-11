@@ -4,8 +4,6 @@
   gather_facts: yes
 
   tasks:
-  - name: Run Updates
-    tasks:
     - name: run ipconfig
       raw: ipconfig
       register: ipconfig
