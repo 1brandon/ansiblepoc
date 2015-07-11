@@ -1,5 +1,5 @@
 - name: Update Windows
-  hosts: 10.4.6.55
+  hosts: 10.4.7.55
   connection: local
   gather_facts: yes
 
