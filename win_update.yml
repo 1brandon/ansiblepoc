@@ -5,5 +5,8 @@
 
   tasks:
   - name: Run Updates
-    win_updates:
-      category: security
+    tasks:
+    - name: run ipconfig
+      raw: ipconfig
+      register: ipconfig
+    - debug: var=ipconfig
